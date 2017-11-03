@@ -68,3 +68,4 @@ Also additionally install 'tmux' : sudo yum install tmux
   	b. To calculate principal components:
 
   	spark-submit --master yarn --verbose --class org.ssketch.SSketchPCA --conf spark.driver.maxResultSize=0 --conf spark.network.timeout=4000s --conf spark.executor.instances=<put #of instances> --conf spark.executor.cores=8 --driver-memory <Highest Memory Available> --executor-memory <Highest Memory Available> --driver-java-options "-Di=s3n://YOUR-REPO/FILE.seq -Do=output/ -Drows=<N> -Dcols=<D> -Dclusters=<PARTITION> -Dq=<#iterations> -Dpcs=<k> -DsubSample=10 -DsubSampleNorm=10 -DmaxIter=1 -DcalculateError=0 -DSingularValue=<Derived Singular Value> -Dtolerance=0.05" sSketch.jar 
+=======
